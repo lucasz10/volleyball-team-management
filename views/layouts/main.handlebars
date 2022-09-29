@@ -10,20 +10,35 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <title>Volleyball Team Management</title>
   </head>
 
   <body>
-    <header class="navbar">
-      <p class="name">Volleyball Team Management</p>
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>Volleyball Team Management</h1>
       <nav>
-        <ul>
-          <li><a href="#Login">Login</a></li>
-          <li><a href="#Team">Team</a></li>
-          <li><a href="#Players">Players</a></li>
-          <li><a href="#Events">Events</a></li>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="btn" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn" href="#">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn" href="#">Events</a>
+          </li>
         </ul>
       </nav>
     </header>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome!</h1>
+        <p class="lead">
+          Welcome to your one stop shopw for all your Volleyball Management
+          needs. Here you can maintain your team, players, and schedule events.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
