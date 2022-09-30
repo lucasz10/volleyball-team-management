@@ -38,7 +38,7 @@ const loginFormHandler = async (event) => {
     }
   };
 
-  const createUserHandler = () => {
+  const createUserHandler = async () => {
 
     const username = document.querySelector('#username-create').value.trim();
     const email = document.querySelector('#email-create').value.trim();
@@ -66,9 +66,18 @@ const loginFormHandler = async (event) => {
             password: password
         };
     
+    //Need to convert this to a fetch request to api routes.
+    //Utils will not be available on user side
+    const response = await fetch('/api/user-routes/createUser', {
+        method: 'POST',
+        body: JSON.stringify(newUser),
+        headers: { 'Content-Type': 'application/json' },
+    })
 
-    createUser(JSON.stringify(newUser));
-
+    if(response.ok){
+        alert("Account Created Successfully! Please log in to your new account!")
+        document.location.replace('/')
+    }
   }
 
   const createTeamHandler = () => {
