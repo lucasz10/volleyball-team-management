@@ -15,9 +15,20 @@ Team.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        teamRecord: {
+        teamWins: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        },
+        teamLosses: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            },
         },
     },
     {
