@@ -66,9 +66,7 @@ const loginFormHandler = async (event) => {
             password: password
         };
     
-    //Need to convert this to a fetch request to api routes.
-    //Utils will not be available on user side
-    const response = await fetch('/api/user-routes/createUser', {
+    const response = await fetch('/api/users/createUser', {
         method: 'POST',
         body: JSON.stringify(newUser),
         headers: { 'Content-Type': 'application/json' },
@@ -77,10 +75,12 @@ const loginFormHandler = async (event) => {
     if(response.ok){
         alert("Account Created Successfully! Please log in to your new account!")
         document.location.replace('/')
+    } else {
+        alert("Failed to create account.")
     }
-  }
+  };
 
-  const createTeamHandler = () => {
+  const createTeamHandler = async () => {
 
     const teamName = document.querySelector('#teamname-create').value.trim();
 
@@ -96,7 +96,18 @@ const loginFormHandler = async (event) => {
         teamLosses: 0,
     }
 
-    createTeam(JSON.stringify(newTeam));
+    const response = await fetch('/api/teams/createUser', {
+        method: 'POST',
+        body: JSON.stringify(newTeam),
+        headers: { 'Content-Type': 'application/json' },
+    })
+
+    if(response.ok){
+        alert("Team Created Successfully!")
+        document.location.replace('/teams')
+    } else {
+        alert("Failed to create account.")
+    }
 
   }
   
