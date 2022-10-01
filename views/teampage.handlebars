@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="css" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>PHX Valor Team</title>
+  </head>
+  <style>
+    
+    body {
+      font-family: sans-serif;
+    
+    }
+    table,
+    th,
+    td {
+      border: 20px black;
+      border-collapse: collapse;
+      padding: 40px;
+    }
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    tr:nth-child(even) {
+      background-color: firebrick;
+    }
+    th {
+      background-color: darkgray;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">PHX Valor Record</h1>
+        <p class="lead">2 Wins 2 Loses</p>
+      </div>
+    </div>
+
+    <div class="table-content">
+      <table
+        class="table table-borded table-responsive table-striped"
+        id="table-list"
+      >
+        <thead class="table-dark">
+          <tr>
+            <td>Name</td>
+            <td>Number</td>
+            <td>Position</td>
+            <td>Height</td>
+            <td>Contact Info</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Zach Lucas</td>
+            <td>1</td>
+            <td>OH/MB</td>
+            <td>6'3"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Timmy Le</td>
+            <td>2</td>
+            <td>L</td>
+            <td>5'6"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Nico Gutierrez</td>
+            <td>4</td>
+            <td>OH</td>
+            <td>6'0"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Connor Boyles</td>
+            <td>5</td>
+            <td>OH/S</td>
+            <td>6'2"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Tyler Kraemer</td>
+            <td>6</td>
+            <td>DS</td>
+            <td>-</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Casson McMahon</td>
+            <td>10</td>
+            <td>OH</td>
+            <td>6'5"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Taylor Galliano</td>
+            <td>11</td>
+            <td>OPP</td>
+            <td>6'4"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Nicholas Gibson</td>
+            <td>13</td>
+            <td>OH</td>
+            <td>6'6"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Alex Martinez</td>
+            <td>14</td>
+            <td>OH</td>
+            <td>6'4"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Quinn Hunter</td>
+            <td>15</td>
+            <td>S</td>
+            <td>6'4'</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Charlie De La vara</td>
+            <td>22</td>
+            <td>S/L</td>
+            <td>6'3"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Tim Porter</td>
+            <td>24</td>
+            <td>OPP</td>
+            <td>6'4"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>Blake Music</td>
+            <td>25</td>
+            <td>MB</td>
+            <td>6'5"</td>
+            <td>Contact Info</td>
+          </tr>
+          <tr>
+            <td>KJ Struz</td>
+            <td>33</td>
+            <td>MB</td>
+            <td>6'6"</td>
+            <td>Contact Info</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row justify-content-around" style="width: 30rem;">
+        <div class="border border-secondary">
+          <h5 class="card-title">PHX Valor PlayBook</h5>
+          <p class="card-text">Click the link below to review the Playbook</p>
+          <a href="#" class="card-link">Click Here</a>
+        </div>
+      </div>
+  
+      <script>
+        var table = document.getElementById("table-list");
+        var cells = table.getElementsByTagName("td");
+
+        for (var i = 0; i < cells.length; i++) {
+          cells[i].onclick = function () {
+            if (this.hasAttribute("data-clicked")) {
+            }
+            this.setAttribute("date-clicked", "yes");
+            this.setAttribute("data-clicked", this.innerHTML);
+
+            var input = document.createElement("input");
+            input.setAttribute("type", "text");
+            input.value = this.innerHTML;
+            input.style.width = this.offsetWidth - this.clientLeft * 2 + "px";
+            input.style.height = this.offsetHeight - this.clientTop * 2 + "px";
+            input.style.border = "0px";
+            input.style.fontFamily = "inherit";
+            input.style.fontSize = "inherit";
+            input.style.textAlign = "inherit";
+            input.style.backgroundColor = "white";
+
+            input.onblur = function () {
+              var td = input.parentElement;
+              var orig_text = input.parentElement.getAttribute("data-text");
+              var current_text = this.value;
+
+              if (orig_text != current_text) {
+                //there are changes in the cell's text
+                //save to database with Ajax
+                td.removeAttribute("data-clicked");
+                td.removeAttribute("data-text");
+                td.innerHTML = current_text;
+                td.style.cssText = "padding: 5px";
+                console.log(orig_text + "is changed to" + current_text);
+              } else {
+                td.removeAttribute("data-clicked");
+                td.removeAttribute("data-text");
+                td.innerHTML = orig_text;
+                td.style.cssText = "padding: 5px";
+                console.log("No Changes Made");
+              }
+            };
+            input.onkeypress = function () {
+              if (event.key === "Enter") {
+                this.blur();
+              }
+            };
+
+            this.innerHTML = "";
+            this.style.cssText = "padding: 0px 0px";
+            this.append(input);
+            this.firstElementChild.select();
+          };
+        }
+
+        console.log(cells);
+      </script>
+    </div>
+  </body>
+</html>
