@@ -61,9 +61,14 @@ router.post('/createUser', async (req, res) => {
         returning: true,
     })
 
+    req.session.save(() => {
+      req.session.logged_in = true;
+      req.session.user_id = userData.id;
+      res.status(200).json ({ message: 'Account created successfully! Logging in User.' })
+    })
+
   } catch (err) {
     res.status(401).json(err);
   }
-  res.status(200).json ({ message: 'Account created successfully!' })
 })
 module.exports = router;
