@@ -140,6 +140,42 @@ const createPlayerHandler = async () => {
   }
 }
 
+const createEventHandler = async () => {
+
+  const teamId = parseInt($('#team_id').text());
+
+  const eventType = document.querySelector('#eventtype-create').value.trim();
+  const eventName = document.querySelector('#eventname-create').value.trim();
+  const eventDate = document.querySelector('#eventDate-create').value.trim();
+
+  if(!eventName) {
+      alert("Error: Please enter a team name!")
+      return;
+  }
+
+  const newEvent = 
+  {
+      event_type: eventType,
+      event_name: eventName,
+      event_date: eventDate,
+      team_id: teamId
+  }
+
+  const response = await fetch('/api/events/createEvent', {
+      method: 'POST',
+      body: JSON.stringify(newEvent),
+      headers: { 'Content-Type': 'application/json' },
+  })
+
+  if(response.ok){
+      alert("Team Created Successfully!")
+      document.location.reload();
+  } else {
+      alert("Failed to create account.")
+  }
+
+}
+
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
 document.querySelector('#logout').addEventListener('click', logout);
@@ -150,5 +186,5 @@ document.querySelector('#create-team').addEventListener('submit', createTeamHand
 
 document.querySelector('#create-player').addEventListener('submit', createPlayerHandler);
 
-
+document.querySelector('#create-event').addEventListener('submit', createEventHandler);
 
