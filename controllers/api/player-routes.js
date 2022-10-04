@@ -1,21 +1,17 @@
 const router = require('express').Router();
-const { Team, Player } = require('../../models');
+const { Player } = require('../../models');
 
-router.post(':id/createPlayer', async (req, res) => {
+router.post('/createPlayer', async (req, res) => {
     try {
-        const currentTeam = await Team.findOne({ where: { id: req.params.id } })
+        
+        await Player.create(req.body)
 
-        var newPlayerObj = JSON.parse(req.body)
-
-        let newData = {
-            team_id: currentTeam.id,
-        }
-
-        newPlayerObj.push(newData)
-
-        await createTeam(JSON.stringify(newPlayerObj))
-    
+        res.status(200).json({ message: 'Player created successfully!'})
+        
     } catch (err) {
         res.status(400).json(err)
     }
+    
 })
+
+module.exports = router;
