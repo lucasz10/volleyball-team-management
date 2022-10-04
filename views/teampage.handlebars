@@ -42,7 +42,10 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">PHX Valor Record</h1>
-        <p class="lead">2 Wins 2 Loses</p>
+        <h1 class="teamname" {{teamName}}></h1>
+        <p> Team ID</p>
+        <p class="team_id">{{id}}</p>
+        <p>{{teamWins}} Wins {{teamLosses}} Loses</p>
       </div>
     </div>
 
@@ -54,111 +57,18 @@
         <thead class="table-dark">
           <tr>
             <td>Name</td>
-            <td>Number</td>
+            <td>ID</td>
+            <td>Birth Date</td>
+            <td>Payer Number</td>
             <td>Position</td>
-            <td>Height</td>
-            <td>Contact Info</td>
+            <td>Player Notes</td>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Zach Lucas</td>
-            <td>1</td>
-            <td>OH/MB</td>
-            <td>6'3"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Timmy Le</td>
-            <td>2</td>
-            <td>L</td>
-            <td>5'6"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Nico Gutierrez</td>
-            <td>4</td>
-            <td>OH</td>
-            <td>6'0"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Connor Boyles</td>
-            <td>5</td>
-            <td>OH/S</td>
-            <td>6'2"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Tyler Kraemer</td>
-            <td>6</td>
-            <td>DS</td>
-            <td>-</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Casson McMahon</td>
-            <td>10</td>
-            <td>OH</td>
-            <td>6'5"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Taylor Galliano</td>
-            <td>11</td>
-            <td>OPP</td>
-            <td>6'4"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Nicholas Gibson</td>
-            <td>13</td>
-            <td>OH</td>
-            <td>6'6"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Alex Martinez</td>
-            <td>14</td>
-            <td>OH</td>
-            <td>6'4"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Quinn Hunter</td>
-            <td>15</td>
-            <td>S</td>
-            <td>6'4'</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Charlie De La vara</td>
-            <td>22</td>
-            <td>S/L</td>
-            <td>6'3"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Tim Porter</td>
-            <td>24</td>
-            <td>OPP</td>
-            <td>6'4"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>Blake Music</td>
-            <td>25</td>
-            <td>MB</td>
-            <td>6'5"</td>
-            <td>Contact Info</td>
-          </tr>
-          <tr>
-            <td>KJ Struz</td>
-            <td>33</td>
-            <td>MB</td>
-            <td>6'6"</td>
-            <td>Contact Info</td>
-          </tr>
+         {{#each players as |player|}}
+         {{> player-details}}
+         {{/each}}
+
         </tbody>
       </table>
 
@@ -170,7 +80,7 @@
         </div>
       </div>
   
-      <script>
+      {{!-- <script>
         var table = document.getElementById("table-list");
         var cells = table.getElementsByTagName("td");
 
@@ -227,7 +137,7 @@
         }
 
         console.log(cells);
-      </script>
+      </script> --}}
     </div>
   </body>
 </html>

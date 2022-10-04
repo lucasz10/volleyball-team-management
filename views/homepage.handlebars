@@ -15,31 +15,9 @@
 <body>
   
   <h2>Welcome, Zachary</h2>
+<p>Please Select A Team You Wish To View:</p>
 
-<div class="card">
-  <div class="card-body">
-    Confirm Roster for upcoming Game!
-  </div>
-</div>
-
-<h2>Upcoming Events</h2>
-<div class="card" style="width: 25rem;">
-  <div class="card-header">
-    Future Events
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Event 1</li>
-    <li class="list-group-item">Event 2</li>
-    <li class="list-group-item">Event 3 </li>
-  </ul>
-</div>
-
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Daily Reminder</strong> Make sure to check Roster against Team IX. Go over playbook with team! 
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-</body>
-</html>
+{{#each teams for |team|}}
+{{> team-details}}
+{{/each}}
 
