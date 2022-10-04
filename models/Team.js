@@ -18,10 +18,12 @@ Team.init(
         teamWins: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 0,
         },
         teamLosses: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 0,
         },
         user_id: {
             type: DataTypes.INTEGER,
