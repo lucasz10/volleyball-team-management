@@ -1,6 +1,6 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
-
+  
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
@@ -178,13 +178,13 @@ const createEventHandler = async () => {
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
-document.querySelector('#logout').addEventListener('click', logout);
+// document.querySelector('#logout').addEventListener('click', logout);
 
-document.querySelector('#create-user').addEventListener('submit', createUserHandler);
+// document.querySelector('#create-user').addEventListener('submit', createUserHandler);
 
-document.querySelector('#create-team').addEventListener('submit', createTeamHandler);
+// document.querySelector('#create-team').addEventListener('submit', createTeamHandler);
 
-document.querySelector('#create-player').addEventListener('submit', createPlayerHandler);
+// document.querySelector('#create-player').addEventListener('submit', createPlayerHandler);
 
-document.querySelector('#create-event').addEventListener('submit', createEventHandler);
+// document.querySelector('#create-event').addEventListener('submit', createEventHandler);
 
