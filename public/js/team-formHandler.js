@@ -66,9 +66,9 @@ const createEventHandler = async () => {
 };
 
 document
-  .querySelector("#create-player")
+  .querySelector(".createplayer-form")
   .addEventListener("submit", createPlayerHandler);
 
 document
-  .querySelector("#create-event")
+  .querySelector(".createevent-form")
   .addEventListener("submit", createEventHandler);
