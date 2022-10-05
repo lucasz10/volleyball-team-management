@@ -29,7 +29,7 @@ router.get("/homepage", withAuth, async (req, res) => {
 
     res.render("homepage", {
       teams,
-      logged_In: req.session.logged_in,
+      logged_in: req.session.logged_in,
       user_name: req.session.user_name,
     });
   } catch (err) {
