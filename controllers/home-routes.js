@@ -46,12 +46,18 @@ router.get("/team/:id", withAuth, async (req, res) => {
       where: { team_id: req.params.id },
     });
 
+    const eventData = await Event.findAll({
+      where: { team_id: req.params.id },
+    });
+
     const team = teamData.get({ plain: true });
     const players = playerData.map((player) => player.get({ plain: true }));
+    const events = eventData.map((event) => event.get({ plain: true }));
 
     res.render("teampage", {
       ...team,
       players,
+      events,
       logged_In: req.session.logged_in,
     });
   } catch (err) {
