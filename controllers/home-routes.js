@@ -7,8 +7,13 @@ const { Team, Player, Event } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    res.render("login");
-  } catch {
+    if(!req.session.logged_in){
+      res.render("login");
+    } else {
+      res.redirect('/homepage')
+    }
+    
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
@@ -41,11 +46,11 @@ router.get("/team/:id", withAuth, async (req, res) => {
       where: { team_id: req.params.id },
     });
 
-    const teams = teamData.map((team) => team.get({ plain: true }));
-    const players = playerData.get({ plain: true });
+    const team = teamData.get({ plain: true });
+    const players = playerData.map((player) => player.get({ plain: true }));
 
     res.render("teampage", {
-      ...teams,
+      ...team,
       players,
       logged_In: req.session.logged_in,
     });
