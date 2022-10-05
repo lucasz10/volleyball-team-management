@@ -25,5 +25,5 @@ const createTeamHandler = async () => {
 };
 
 document
-  .querySelector("#create-team")
+  .querySelector(".createTeam-form")
   .addEventListener("submit", createTeamHandler);
