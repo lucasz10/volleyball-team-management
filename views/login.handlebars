@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <title>Login</title>
-</head>
-<body>
-  
-  <h1>Welcome to the Volleyball Team Management system</h1>
-<div class="container ">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Login</label>
-      <input type="email" class="form-control" id="email-login" placeholder="Email">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password-login" placeholder="Password">
+<h1>Welcome to the Volleyball Team Management system</h1>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-    </div>
-    <button id="loginbutton">Login</button>
-  </div>
-
-  <div class="container my-5" class="g-col-4">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Create Account</label>
-      <input type="Username" class="form-control" id="username-create" placeholder="Username">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email-create" placeholder="Email">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password-create" placeholder="Password">
-
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
       </div>
-    <button id="create-user">Create User</button>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
   </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
