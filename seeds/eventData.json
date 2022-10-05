@@ -1,0 +1,52 @@
+[
+    {
+        "event_type": "Tournament",
+        "event_name": "Semi Finals",
+        "event_date": "10/08/2022"
+    },
+    {
+        "event_type": "Paractice",
+        "event_name": "Practice game with MadDogs",
+        "event_date": "10/10/2022"
+    },
+    {
+        "event_type": "Game",
+        "event_name": "Team Alpha vs. Phoenix Valor",
+        "event_date": "10/12/2022"
+    },
+    {
+        "event_type": "Practice",
+        "event_name": "Combos",
+        "event_date": "10/14/2022"
+    },
+    {
+        "event_type": "Game",
+        "event_name": "Dophins vs. Phoenix Valor",
+        "event_date": "10/17/2022"
+    },    
+    {
+        "event_type": "Game",
+        "event_name": "Risings Suns vs. Phoenix Valor",
+        "event_date": "10/19/2022"
+    },
+    {
+        "event_type": "Practice",
+        "event_name": "Spiking",
+        "event_date": "10/21/2022"
+    },
+    {
+        "event_type": "Practice",
+        "event_name": "Recieving",
+        "event_date": "10/24/2022"
+    },
+    {
+        "event_type": "Practice",
+        "event_name": "Serving",
+        "event_date": "10/26/2022"
+    },
+    {
+        "event_type": "Tournament",
+        "event_name": "Finals",
+        "event_date": "10/29/2022"
+    }
+]
