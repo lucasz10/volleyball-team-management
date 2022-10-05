@@ -142,4 +142,25 @@
   </div>
 </div>
 
+ <div class="table-content">
+    <table
+      class="table table-borded table-responsive table-striped"
+      id="table-list"
+    >
+      <thead class="table-dark">
+        <tr>
+          <td>Event Type</td>
+          <td>Event Name</td>
+          <td>Event Date</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each events as |event|}}
+        {{> event-details}}
+        {{/each}}
+
+      </tbody>
+    </table>
+ </div>
+
 <script src="/js/team-formHandler.js"></script>
