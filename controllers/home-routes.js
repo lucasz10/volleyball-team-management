@@ -1,31 +1,32 @@
 const router = require("express").Router();
 const excelJS = require("exceljs");
 const path = require("path");
-const withAuth = require('../utils/auth');
+const withAuth = require("../utils/auth");
 
 const { Team, Player, Event } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    res.render("login")
+    res.render("login");
   } catch {
     console.log(err);
     res.status(500).json(err);
   }
-})
+});
 
 router.get("/homepage", withAuth, async (req, res) => {
   try {
-      const TeamData = await Team.findAll({
-        where: { user_id: req.session.user_id },
-      });
+    const TeamData = await Team.findAll({
+      where: { user_id: req.session.user_id },
+    });
 
-      const teams = TeamData.map((team) => team.get({ plain: true }));
+    const teams = TeamData.map((team) => team.get({ plain: true }));
 
-      res.render("homepage", {
-        teams,
-        logged_In: req.session.logged_in,
-      });
+    res.render("homepage", {
+      teams,
+      logged_In: req.session.logged_in,
+      user_name: req.session.user_name,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -33,7 +34,6 @@ router.get("/homepage", withAuth, async (req, res) => {
 });
 
 router.get("/team/:id", withAuth, async (req, res) => {
-
   try {
     const teamData = await Team.findByPk(req.params.id);
 
@@ -56,7 +56,6 @@ router.get("/team/:id", withAuth, async (req, res) => {
 });
 
 router.get("/team/:id/export", withAuth, async (req, res) => {
-
   const teamData = await Team.findByPk(req.params.id);
 
   const workbook = new excelJS.Workbook();
@@ -85,13 +84,12 @@ router.get("/team/:id/export", withAuth, async (req, res) => {
   try {
     const fileName = `${filePath}/${teamData.teamName}.xlsx`;
     await workbook.xlsx.writeFile(fileName);
-    res.attachment(`${teamData.teamName}.xlsx`)
+    res.attachment(`${teamData.teamName}.xlsx`);
     res.sendFile(path.join(__dirname, "../", fileName));
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-  
 });
 
 // router.get('/Event/:id', async (req, res) => {
