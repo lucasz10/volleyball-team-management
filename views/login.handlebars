@@ -10,23 +10,11 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-  <title>PHX Valor Home</title>
+  <title>Login</title>
 </head>
 <body>
-
-  <div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLoginForm">
-  Login
-</button>
-
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegisterForm">
-  Sign Up
-</button>
-
-</div>
   
-  <h2>Welcome, Zachary</h2>
-<p>Please Select A Team You Wish To View:</p>
+  <h1>Welcome to the Volleyball Team Management system</h2>
 
 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -84,8 +72,3 @@
     </div>
   </div>
 </div>
-
-{{#each teams for |team|}}
-{{> team-details}}
-{{/each}}
-
