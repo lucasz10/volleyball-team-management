@@ -34,7 +34,7 @@
         "position": "opposite hitter",
         "player_notes": "",
         "team_id": "1"
-    },   
+    },
     {
         "first_name": "Javier",
         "last_name": "Carpenter",
@@ -53,7 +53,6 @@
         "player_notes": "",
         "team_id": "1"
     },
-
     {
         "first_name": "Aldo",
         "last_name": "Pittman",
@@ -108,7 +107,6 @@
         "player_notes": "",
         "team_id": "2"
     },
-
     {
         "first_name": "Edgar",
         "last_name": "Rivera",
@@ -162,5 +160,5 @@
         "position": "server",
         "player_notes": "",
         "team_id": "3"
-    }    
+    }
 ]
