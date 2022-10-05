@@ -1,6 +1,5 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
-  
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
@@ -34,22 +33,24 @@ const logout = async () => {
 };
 
 const createUserHandler = async () => {
+  event.preventDefault();
+  console.log("Creating User")
 
   const username = document.querySelector('#username-create').value.trim();
   const email = document.querySelector('#email-create').value.trim();
   const password = document.querySelector('#password-create').value.trim();
 
-  if(username.length < 8 || username.contains(' ')){
+  if(username.length < 8 || !username ){
       alert("Error: Please enter a valid username.")
       return;
   }
 
-  if(email.contains(' ')){
+  if(!email){
       alert("Error: Please enter a valid email.")
       return;
   }
 
-  if(password.length < 8 || password.contains(' ')){
+  if(password.length < 8 || !password){
       alert("Error: Please enter a valid password.")
       return;
   }
@@ -71,7 +72,7 @@ const createUserHandler = async () => {
       alert("Account Created Successfully! Logging into your new account...")
       document.location.replace('/')
   } else {
-      alert("Failed to create account.")
+      alert(response.statusText)
   }
 };
 
@@ -180,7 +181,7 @@ document.querySelector('.login-form').addEventListener('submit', loginFormHandle
 
 // document.querySelector('#logout').addEventListener('click', logout);
 
-// document.querySelector('#create-user').addEventListener('submit', createUserHandler);
+document.querySelector('.signup-form').addEventListener('submit', createUserHandler);
 
 // document.querySelector('#create-team').addEventListener('submit', createTeamHandler);
 
