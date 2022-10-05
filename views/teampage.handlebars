@@ -30,7 +30,7 @@
       <h1 class="display-4">PHX Valor Record</h1>
       <h1 class="teamname" {{teamName}}></h1>
       <p> Team ID</p>
-      <p class="team_id">{{id}}</p>
+      <p id="team_id">{{id}}</p>
       <p>{{teamWins}} Wins {{teamLosses}} Loses</p>
     </div>
   </div>
@@ -58,73 +58,88 @@
       </tbody>
     </table>
 
-    <div class="row justify-content-around" style="width: 30rem;">
-      <div class="border border-secondary">
-        <h5 class="card-title">PHX Valor PlayBook</h5>
-        <p class="card-text">Click the link below to review the Playbook</p>
-        <a href="#" class="card-link">Click Here</a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createeventmodal">
+  Create Team
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="createeventmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Event</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form createevent-form">
+          <div class="form-group">
+            <label for="eventname-create">Input Event Name</label>
+            <input class="form-input" type="text" id="eventname-create" />
+          </div>
+          <div class="form-group">
+            <label for="eventtype-create">Input Event Type</label>
+            <input class="form-input" type="text" id="eventtype-create" />
+          </div>
+          <div class="form-group">
+            <label for="eventDate-create">Input Event Date</label>
+            <input class="form-input" type="text" id="eventDate-create" />
+          </div>
+         
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Create</button>
+          </div>
+        </form>
       </div>
     </div>
-
-    {{!-- <script>
-      var table = document.getElementById("table-list");
-      var cells = table.getElementsByTagName("td");
-
-      for (var i = 0; i < cells.length; i++) {
-        cells[i].onclick = function () {
-          if (this.hasAttribute("data-clicked")) {
-          }
-          this.setAttribute("date-clicked", "yes");
-          this.setAttribute("data-clicked", this.innerHTML);
-
-          var input = document.createElement("input");
-          input.setAttribute("type", "text");
-          input.value = this.innerHTML;
-          input.style.width = this.offsetWidth - this.clientLeft * 2 + "px";
-          input.style.height = this.offsetHeight - this.clientTop * 2 + "px";
-          input.style.border = "0px";
-          input.style.fontFamily = "inherit";
-          input.style.fontSize = "inherit";
-          input.style.textAlign = "inherit";
-          input.style.backgroundColor = "white";
-
-          input.onblur = function () {
-            var td = input.parentElement;
-            var orig_text = input.parentElement.getAttribute("data-text");
-            var current_text = this.value;
-
-            if (orig_text != current_text) {
-              //there are changes in the cell's text
-              //save to database with Ajax
-              td.removeAttribute("data-clicked");
-              td.removeAttribute("data-text");
-              td.innerHTML = current_text;
-              td.style.cssText = "padding: 5px";
-              console.log(orig_text + "is changed to" + current_text);
-            } else {
-              td.removeAttribute("data-clicked");
-              td.removeAttribute("data-text");
-              td.innerHTML = orig_text;
-              td.style.cssText = "padding: 5px";
-              console.log("No Changes Made");
-            }
-          };
-          input.onkeypress = function () {
-            if (event.key === "Enter") {
-              this.blur();
-            }
-          };
-
-          this.innerHTML = "";
-          this.style.cssText = "padding: 0px 0px";
-          this.append(input);
-          this.firstElementChild.select();
-        };
-      }
-
-      console.log(cells);
-    </script> --}}
   </div>
+</div>
 
-  <script src="/js/team-formHandler.js"></script>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createplayermodal">
+  Create Player
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="createplayermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Player</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form createplayer-form">
+          <div class="form-group">
+            <label for="firstname-create">Input Player First Name</label>
+            <input class="form-input" type="text" id="firstname-create" />
+          </div>
+          <div class="form-group">
+            <label for="lastname-create">Input Player Last Name</label>
+            <input class="form-input" type="text" id="lastname-create" />
+          </div>
+          <div class="form-group">
+            <label for="birthdate-create">Input Player Birthdate</label>
+            <input class="form-input" type="text" id="birthdate-create" />
+          </div>
+          <div class="form-group">
+            <label for="playNum-create">Input Player Number</label>
+            <input class="form-input" type="text" id="playNum-create" />
+          </div>
+          <div class="form-group">
+            <label for="playPos-create">Input Player Position</label>
+            <input class="form-input" type="text" id="playerPos-create" />
+          </div>
+          <div class="form-group">
+            <label for="playNotes-create">Input Player Notes</label>
+            <input class="form-input" type="text" id="playNotes-create" />
+          </div>
+         
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/team-formHandler.js"></script>
