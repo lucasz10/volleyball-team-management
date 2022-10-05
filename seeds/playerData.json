@@ -1,0 +1,166 @@
+[
+    {
+        "first_name": "Casey",
+        "last_name": "Macias",
+        "player_birthdate": "08/28/2000",
+        "player_number": "34",
+        "position": "setter",
+        "player_notes": "",
+        "team_id": "1"
+    },
+    {
+        "first_name": "Yadiel",
+        "last_name": "Muller",
+        "player_birthdate": "05/29/2001",
+        "player_number": "08",
+        "position": "middle blocker",
+        "player_notes": "",
+        "team_id": "1"
+    },
+    {
+        "first_name": "Brayden",
+        "last_name": "Chan",
+        "player_birthdate": "07/24/2002",
+        "player_number": "16",
+        "position": "outside hitter",
+        "player_notes": "",
+        "team_id": "1"
+    },
+    {
+        "first_name": "Sebastian",
+        "last_name": "Kennedy",
+        "player_birthdate": "08/12/2001",
+        "player_number": "14",
+        "position": "opposite hitter",
+        "player_notes": "",
+        "team_id": "1"
+    },   
+    {
+        "first_name": "Javier",
+        "last_name": "Carpenter",
+        "player_birthdate": "10/06/2003",
+        "player_number": "01",
+        "position": "libero",
+        "player_notes": "",
+        "team_id": "1"
+    },
+    {
+        "first_name": "Zackery",
+        "last_name": "Aguirre",
+        "player_birthdate": "05/14/2001",
+        "player_number": "25",
+        "position": "server",
+        "player_notes": "",
+        "team_id": "1"
+    },
+
+    {
+        "first_name": "Aldo",
+        "last_name": "Pittman",
+        "player_birthdate": "11/22/1999",
+        "player_number": "08",
+        "position": "setter",
+        "player_notes": "",
+        "team_id": "2"
+    },
+    {
+        "first_name": "Patrick",
+        "last_name": "Bauer",
+        "player_birthdate": "01/20/2002",
+        "player_number": "01",
+        "position": "middle blocker",
+        "player_notes": "",
+        "team_id": "2"
+    },
+    {
+        "first_name": "Keshawn",
+        "last_name": "Brewer",
+        "player_birthdate": "09/03/2001",
+        "player_number": "02",
+        "position": "outside hitter",
+        "player_notes": "",
+        "team_id": "2"
+    },
+    {
+        "first_name": "Jake",
+        "last_name": "Soto",
+        "player_birthdate": "05/28/2001",
+        "player_number": "04",
+        "position": "opposite hitter",
+        "player_notes": "",
+        "team_id": "2"
+    },
+    {
+        "first_name": "Ricky",
+        "last_name": "Booker",
+        "player_birthdate": "05/25/1998",
+        "player_number": "19",
+        "position": "libero",
+        "player_notes": "",
+        "team_id": "2"
+    },
+    {
+        "first_name": "Micheal",
+        "last_name": "Gomez",
+        "player_birthdate": "04/25/2001",
+        "player_number": "14",
+        "position": "server",
+        "player_notes": "",
+        "team_id": "2"
+    },
+
+    {
+        "first_name": "Edgar",
+        "last_name": "Rivera",
+        "player_birthdate": ")4/19/2002",
+        "player_number": "04",
+        "position": "setter",
+        "player_notes": "",
+        "team_id": "3"
+    },
+    {
+        "first_name": "Steven",
+        "last_name": "Monroe",
+        "player_birthdate": "3/24/1999",
+        "player_number": "19",
+        "position": "middle blocker",
+        "player_notes": "",
+        "team_id": "3"
+    },
+    {
+        "first_name": "Brayan",
+        "last_name": "Castillo",
+        "player_birthdate": "8/12/1998",
+        "player_number": "18",
+        "position": "oustide hitter",
+        "player_notes": "",
+        "team_id": "3"
+    },
+    {
+        "first_name": "Alexander",
+        "last_name": "Solis",
+        "player_birthdate": "05/06/1998",
+        "player_number": "05",
+        "position": "opposite hitter",
+        "player_notes": "",
+        "team_id": "3"
+    },
+    {
+        "first_name": "Jayden",
+        "last_name": "Guerrero",
+        "player_birthdate": "3/31/1998",
+        "player_number": "07",
+        "position": "libero",
+        "player_notes": "",
+        "team_id": "3"
+    },
+    {
+        "first_name": "Eugene",
+        "last_name": "Andrews",
+        "player_birthdate": "5/11/1998",
+        "player_number": "12",
+        "position": "server",
+        "player_notes": "",
+        "team_id": "3"
+    }    
+]
