@@ -176,7 +176,7 @@ const createEventHandler = async () => {
 
 }
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('#loginbutton').addEventListener('submit', loginFormHandler);
 
 // document.querySelector('#logout').addEventListener('click', logout);
 

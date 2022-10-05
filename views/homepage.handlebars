@@ -13,13 +13,24 @@
   <title>Team Home</title>
 </head>
 <body>
+
+  <div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLoginForm">
+  Login
+</button>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegisterForm">
+  Sign Up
+</button>
+
+</div>
   
   <h2>Welcome, {{user_name}}!</h2>
 <p>Please Select A Team You Wish To View:</p>
+
 
 <div class="d-flex p-2">
   {{#each teams for |team|}}
   {{> team-details}}
   {{/each}}
 </div>
-
