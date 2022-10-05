@@ -12,7 +12,7 @@ router.get('/homepage/', async (req, res) => {
   
       res.render('homepage', {
         teams,
-        loggedIn: req.session.loggedIn,
+        logged_In: req.session.logged_In,
       });
     } catch (err) {
       console.log(err);
@@ -23,7 +23,7 @@ router.get('/homepage/', async (req, res) => {
   
   router.get('/Team/:id', async (req, res) => {
     if (!req.session.loggedIn) {
-      res.redirect('/login');
+      res.redirect('/');
     } else {
         try {
             const TeamData = await Team.findByPk(req.params.id);
@@ -36,7 +36,7 @@ router.get('/homepage/', async (req, res) => {
         res.render('Team', {
         ...teams,
         players,
-        loggedIn: req.session.loggedIn 
+        logged_In: req.session.logged_In 
     });
       } catch (err) {
         console.log(err);
@@ -44,6 +44,21 @@ router.get('/homepage/', async (req, res) => {
       }
     }});
 
-   
-  
+    // router.get('/Event/:id', async (req, res) => {
+    //   try {
+    //     const EventData = await Event.findAll(req.params.id);
+    
+    //     const events  = EventData.map((team) =>
+    //       events.get({ plain: true })
+    //     );
+    
+    //     res.render('Event', {
+    //       events,
+    //       logged_In: req.session.logged_In,
+    //     });
+    //   } catch (err) {
+    //     console.log(err);
+    //     res.status(500).json(err);
+    //   }
+    // });
 module.exports = router;
