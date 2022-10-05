@@ -18,17 +18,10 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>Volleyball Team Management</h1>
       <nav>
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="btn" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn" href="#">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn" href="#">Events</a>
-          </li>
-        </ul>
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>      
+        {{/if}}
       </nav>
     </header>
     <div class="jumbotron jumbotron-fluid">
@@ -43,6 +36,8 @@
     <main>
       {{{ body }}}
     </main>
-    <script src="/js/formHandlers.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
