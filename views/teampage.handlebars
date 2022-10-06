@@ -30,10 +30,18 @@
       <h1 class="display-4">PHX Valor Record</h1>
       <h1 class="teamname" {{teamName}}></h1>
       <p> Team ID</p>
-      <p id="team_id">{{id}}</p>
+      <p id="team_id" data-team-id={{id}}>{{id}}</p>
       <p>{{teamWins}} Wins {{teamLosses}} Loses</p>
     </div>
   </div>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createeventmodal">
+    Create Event
+  </button>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createplayermodal">
+    Create Player
+  </button>
 
   <div class="table-content">
     <table
@@ -45,7 +53,7 @@
           <td>Name</td>
           <td>ID</td>
           <td>Birth Date</td>
-          <td>Payer Number</td>
+          <td>Player Number</td>
           <td>Position</td>
           <td>Player Notes</td>
         </tr>
@@ -57,10 +65,28 @@
 
       </tbody>
     </table>
+  </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createeventmodal">
-  Create Team
-</button>
+<div class="table-content">
+    <table
+      class="table table-borded table-responsive table-striped"
+      id="table-list"
+    >
+      <thead class="table-dark">
+        <tr>
+          <td>Event Type</td>
+          <td>Event Name</td>
+          <td>Event Date</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each events as |event|}}
+        {{> event-details}}
+        {{/each}}
+
+      </tbody>
+    </table>
+ </div>
 
 <!-- Modal -->
 <div class="modal fade" id="createeventmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -94,10 +120,6 @@
   </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createplayermodal">
-  Create Player
-</button>
-
 <!-- Modal -->
 <div class="modal fade" id="createplayermodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -126,7 +148,7 @@
           </div>
           <div class="form-group">
             <label for="playPos-create">Input Player Position</label>
-            <input class="form-input" type="text" id="playerPos-create" />
+            <input class="form-input" type="text" id="playPos-create" />
           </div>
           <div class="form-group">
             <label for="playNotes-create">Input Player Notes</label>
@@ -141,26 +163,5 @@
     </div>
   </div>
 </div>
-
- <div class="table-content">
-    <table
-      class="table table-borded table-responsive table-striped"
-      id="table-list"
-    >
-      <thead class="table-dark">
-        <tr>
-          <td>Event Type</td>
-          <td>Event Name</td>
-          <td>Event Date</td>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each events as |event|}}
-        {{> event-details}}
-        {{/each}}
-
-      </tbody>
-    </table>
- </div>
 
 <script src="/js/team-formHandler.js"></script>

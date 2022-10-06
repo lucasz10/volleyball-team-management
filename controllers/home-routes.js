@@ -7,12 +7,11 @@ const { Team, Player, Event } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    if(!req.session.logged_in){
+    if (!req.session.logged_in) {
       res.render("login");
     } else {
-      res.redirect('/homepage')
+      res.redirect("/homepage");
     }
-    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -58,7 +57,7 @@ router.get("/team/:id", withAuth, async (req, res) => {
       ...team,
       players,
       events,
-      logged_In: req.session.logged_in,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
