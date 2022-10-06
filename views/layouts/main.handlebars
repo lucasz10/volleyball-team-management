@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-between text-center p-2">
       <h1>Volleyball Team Management</h1>
       <nav>
         {{#if logged_in}}
@@ -21,15 +21,6 @@
         {{/if}}
       </nav>
     </header>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Welcome!</h1>
-        <p class="lead">
-          Welcome to your one stop shopw for all your Volleyball Management
-          needs. Here you can maintain your team, players, and schedule events.
-        </p>
-      </div>
-    </div>
     <main>
       {{{ body }}}
     </main>

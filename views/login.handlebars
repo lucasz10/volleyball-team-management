@@ -1,39 +1,49 @@
-<h1>Welcome to the Volleyball Team Management system</h1>
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4">Welcome!</h1>
+    <p class="lead">
+      Welcome to your one stop shop for all your Volleyball Management
+      needs. Here you can maintain your team, players, and schedule events.
+    </p>
+    <h1>Please log in or sign up to continue:</h1>
+  </div>
+</div>
 
+
+<div class="row justify-content-center">
+  <div class="col-8 col-lg-4">
+    <h2>Login</h2>
     <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
+      <div class="mb-3">
+        <label for="email-login" class="w-20">email:</label>
+        <input class="form-input w-80" type="text" id="email-login" />
       </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
+      <div class="mb-3">
+        <label for="password-login" class="w-20">password:</label>
+        <input class="form-input w-80" type="password" id="password-login" />
       </div>
-      <div class="form-group">
+      <div>
         <button class="btn btn-primary" type="submit">login</button>
       </div>
     </form>
   </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
 
+  <div class="col-8 col-lg-4">
+    <h2>Signup</h2>
     <form class="form signup-form">
-      <div class="form-group">
+      <div class="mb-3">
         <label for="username-create">name:</label>
         <input class="form-input" type="text" id="username-create" />
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="email-create">email:</label>
         <input class="form-input" type="text" id="email-create" />
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="password-create">password:</label>
         <input class="form-input" type="password" id="password-create" />
       </div>
-      <div class="form-group">
+      <div>
         <button class="btn btn-primary" type="submit">Create Account</button>
       </div>
     </form>
