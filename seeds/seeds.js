@@ -5,6 +5,7 @@ const userData = require('./userData.json');
 const playerData = require('./playerData.json');
 const teamData = require('./teamData.json');
 
+
 const seedUserData = async () => {
     await sequelize.sync({ force: true });
   
