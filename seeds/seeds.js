@@ -1,9 +1,10 @@
 const sequelize = require('../config/connection');
 const { User, Player, Team } = require('../models');
 
-const User = require('../userData.json');
-const Player = require('../playerData.json');
-const Team = require('../teamData.json');
+const userData = require('./userData.json');
+const playerData = require('./playerData.json');
+const teamData = require('./teamData.json');
+
 
 const seedUserData = async () => {
     await sequelize.sync({ force: true });
@@ -13,7 +14,7 @@ const seedUserData = async () => {
       returning: true,
     });
   
-    for (const project of userData) {
+    for (const User of userData) {
       await User.create({
         ...User,
         user_id: users[Math.floor(Math.random() * users.length)].id,
@@ -29,12 +30,12 @@ const seedUserData = async () => {
   const seedPlayerData = async () => {
     await sequelize.sync({ force: true });
   
-    const player = await Player.bulkCreate(playerData, {
+    const players = await Player.bulkCreate(playerData, {
       individualHooks: true,
       returning: true,
     });
   
-    for (const project of playerData) {
+    for (const player of playerData) {
       await player.create({
         ...Player,
         player_id: players[Math.floor(Math.random() * players.length)].id,
@@ -54,10 +55,10 @@ const seedUserData = async () => {
       returning: true,
     });
   
-    for (const project of teamData) {
+    for (const team of teamData) {
       await Team.create({
         ...Team,
-        team_id: team[Math.floor(Math.random() * team.length)].id,
+        team_id: teams[Math.floor(Math.random() * team.length)].id,
       });
     }
   
