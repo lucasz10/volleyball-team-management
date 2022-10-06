@@ -1,5 +1,5 @@
 const createPlayerHandler = async () => {
-  const teamId = parseInt($("#team_id").text());
+  const teamId = document.querySelector("#team_id").dataset.teamId;
 
   const firstName = document.querySelector("#firstname-create").value.trim();
   const lastName = document.querySelector("#lastname-create").value.trim();
@@ -33,7 +33,7 @@ const createPlayerHandler = async () => {
 };
 
 const createEventHandler = async () => {
-  const teamId = parseInt($("#team_id").text());
+  const teamId = document.querySelector("#team_id").dataset.teamId;
 
   const eventType = document.querySelector("#eventtype-create").value.trim();
   const eventName = document.querySelector("#eventname-create").value.trim();
