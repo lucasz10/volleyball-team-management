@@ -8,6 +8,11 @@ const createPlayerHandler = async () => {
   const playPos = document.querySelector("#playPos-create").value.trim();
   const playNotes = document.querySelector("#playNotes-create").value.trim();
 
+  if (playPos === "Please select a position") {
+    alert("Error: Please select a position!");
+    return;
+  }
+
   const newPlayer = {
     first_name: firstName,
     last_name: lastName,
@@ -41,6 +46,11 @@ const createEventHandler = async () => {
 
   if (!eventName) {
     alert("Error: Please enter a team name!");
+    return;
+  }
+
+  if (eventType === "Please select an event type") {
+    alert("Error: Please select an event type!");
     return;
   }
 

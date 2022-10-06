@@ -104,15 +104,18 @@
       </div>
       <div class="modal-body">
         <form class="form createevent-form">
-          <div class="form-group">
+          <div class="mb-3">
             <label for="eventname-create">Input Event Name</label>
             <input class="form-input" type="text" id="eventname-create" />
           </div>
-          <div class="form-group">
-            <label for="eventtype-create">Input Event Type</label>
-            <input class="form-input" type="text" id="eventtype-create" />
+          <div class="mb-3">
+            <select class="form-select" aria-label="Default select example" id="eventtype-create">
+              <option selected>Please select an event type</option>
+              <option value="Match">Match</option>
+              <option value="Practice">Practice</option>
+            </select>
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="eventDate-create">Input Event Date</label>
             <input class="form-input" type="text" id="eventDate-create" />
           </div>
@@ -136,32 +139,36 @@
       </div>
       <div class="modal-body">
         <form class="form createplayer-form">
-          <div class="form-group">
+          <div class="mb-3">
             <label for="firstname-create">Input Player First Name</label>
             <input class="form-input" type="text" id="firstname-create" />
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="lastname-create">Input Player Last Name</label>
             <input class="form-input" type="text" id="lastname-create" />
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="birthdate-create">Input Player Birthdate</label>
             <input class="form-input" type="text" id="birthdate-create" />
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="playNum-create">Input Player Number</label>
             <input class="form-input" type="text" id="playNum-create" />
           </div>
-          <div class="form-group">
-            <label for="playPos-create">Input Player Position</label>
-            <input class="form-input" type="text" id="playPos-create" />
-          </div>
-          <div class="form-group">
+          <select class="form-select mb-3" aria-label="Default select example" id="playPos-create">
+              <option selected>Please select a position</option>
+              <option value="S">S</option>
+              <option value="L">L</option>
+              <option value="OH">OH</option>
+              <option value="MB">MB</option>
+              <option value="OPP">OPP</option>
+            </select>
+          <div class="mb-3">
             <label for="playNotes-create">Input Player Notes</label>
             <input class="form-input" type="text" id="playNotes-create" />
           </div>
          
-          <div class="form-group">
+          <div>
             <button class="btn btn-primary" type="submit">Create</button>
           </div>
         </form>
