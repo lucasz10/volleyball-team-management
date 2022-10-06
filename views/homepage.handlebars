@@ -1,16 +1,20 @@
-<h2>Welcome, {{user_name}}!</h2>
-<p>Please Select A Team You Wish To View:</p>
+<div class="text-center">
+  <h2>Welcome, {{user_name}}!</h2>
+  <p>Please Select A Team You Wish To View:</p>
 
-<div class="d-flex p-2">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createteammodal">
+    Create Team
+  </button>
+</div>
+
+<div class="container-fluid row justify-content-center m-3">
   {{#each teams as |team|}}
   {{> team-details}}
   {{/each}}
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createteammodal">
-  Create Team
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="createteammodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
