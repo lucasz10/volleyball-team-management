@@ -17,7 +17,7 @@
     margin-right: auto;
   }
   tr:nth-child(even) {
-    background-color: firebrick;
+    background-color: #90d9e8;
   }
   th {
     background-color: darkgray;
@@ -26,69 +26,73 @@
 </style>
 <body>
   <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">PHX Valor Record</h1>
-      <h1 class="teamname" {{teamName}}></h1>
-      <p> Team ID</p>
-      <p id="team_id" data-team-id={{id}}>{{id}}</p>
+    <div class="container text-center">
+      <h1 class="display-4" id="team_id" data-team-id={{id}}>{{teamName}} Record</h1>
       <p>{{teamWins}} Wins {{teamLosses}} Loses</p>
     </div>
   </div>
+  <nav>
+    <div class="container-fluid row justify-content-center m-3">
+      <button type="button" class="btn btn-primary m-1 col-4 col-lg-2" data-bs-toggle="modal" data-bs-target="#createeventmodal">
+        Create Event
+      </button>
 
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createeventmodal">
-    Create Event
-  </button>
+      <button type="button" class="btn btn-primary m-1 col-4 col-lg-2" data-bs-toggle="modal" data-bs-target="#createplayermodal">
+        Create Player
+      </button>
 
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createplayermodal">
-    Create Player
-  </button>
+      <a class="btn btn-primary m-1 col-4 col-lg-2" href="/team/{{id}}/export" role="button">Export Team to Excel</a>
+      <a class="btn btn-primary m-1 col-4 col-lg-2" href="/homepage" role="button">Return to homepage</a>
+    </div>
+  </nav>
+ 
+  <div class="container-fluid row justify-content-center">
+    <div class="table-content col-8 col-lg-6">
+      <table
+        class="table table-borded table-responsive table-striped"
+        id="table-list"
+      >
+        <thead class="table-dark">
+          <tr>
+            <td>Name</td>
+            <td>Player ID</td>
+            <td>Birth Date</td>
+            <td>Player #</td>
+            <td>Position</td>
+            <td>Player Notes</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each players as |player|}}
+          {{> player-details}}
+          {{/each}}
 
-  <a class="btn btn-primary" href="/team/{{id}}/export" role="button">Export Team to Excel</a>
+        </tbody>
+      </table>
+    </div>
+  
 
-  <div class="table-content">
-    <table
-      class="table table-borded table-responsive table-striped"
-      id="table-list"
-    >
-      <thead class="table-dark">
-        <tr>
-          <td>Name</td>
-          <td>ID</td>
-          <td>Birth Date</td>
-          <td>Player Number</td>
-          <td>Position</td>
-          <td>Player Notes</td>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each players as |player|}}
-        {{> player-details}}
-        {{/each}}
+    <div class="table-content col-6 col-lg-3">
+        <table
+          class="table table-borded table-responsive table-striped"
+          id="table-list"
+        >
+          <thead class="table-dark">
+            <tr>
+              <td>Event Type</td>
+              <td>Event Name</td>
+              <td>Event Date</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each events as |event|}}
+            {{> event-details}}
+            {{/each}}
 
-      </tbody>
-    </table>
+          </tbody>
+        </table>
+    </div>
   </div>
-
-<div class="table-content">
-    <table
-      class="table table-borded table-responsive table-striped"
-      id="table-list"
-    >
-      <thead class="table-dark">
-        <tr>
-          <td>Event Type</td>
-          <td>Event Name</td>
-          <td>Event Date</td>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each events as |event|}}
-        {{> event-details}}
-        {{/each}}
-
-      </tbody>
-    </table>
- </div>
 
 <!-- Modal -->
 <div class="modal fade" id="createeventmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
