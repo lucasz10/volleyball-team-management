@@ -4,7 +4,7 @@
         "last_name": "Macias",
         "player_birthdate": "08/28/2000",
         "player_number": "34",
-        "position": "setter",
+        "position": "S",
         "player_notes": "",
         "team_id": "1"
     },
@@ -13,7 +13,7 @@
         "last_name": "Muller",
         "player_birthdate": "05/29/2001",
         "player_number": "08",
-        "position": "middle blocker",
+        "position": "MB",
         "player_notes": "",
         "team_id": "1"
     },
@@ -22,7 +22,7 @@
         "last_name": "Chan",
         "player_birthdate": "07/24/2002",
         "player_number": "16",
-        "position": "outside hitter",
+        "position": "OH",
         "player_notes": "",
         "team_id": "1"
     },
@@ -31,7 +31,7 @@
         "last_name": "Kennedy",
         "player_birthdate": "08/12/2001",
         "player_number": "14",
-        "position": "opposite hitter",
+        "position": "OH",
         "player_notes": "",
         "team_id": "1"
     },
@@ -40,7 +40,7 @@
         "last_name": "Carpenter",
         "player_birthdate": "10/06/2003",
         "player_number": "01",
-        "position": "libero",
+        "position": "L",
         "player_notes": "",
         "team_id": "1"
     },
@@ -49,7 +49,7 @@
         "last_name": "Aguirre",
         "player_birthdate": "05/14/2001",
         "player_number": "25",
-        "position": "server",
+        "position": "S",
         "player_notes": "",
         "team_id": "1"
     },
@@ -58,7 +58,7 @@
         "last_name": "Pittman",
         "player_birthdate": "11/22/1999",
         "player_number": "08",
-        "position": "setter",
+        "position": "S",
         "player_notes": "",
         "team_id": "2"
     },
@@ -67,7 +67,7 @@
         "last_name": "Bauer",
         "player_birthdate": "01/20/2002",
         "player_number": "01",
-        "position": "middle blocker",
+        "position": "MB",
         "player_notes": "",
         "team_id": "2"
     },
@@ -76,7 +76,7 @@
         "last_name": "Brewer",
         "player_birthdate": "09/03/2001",
         "player_number": "02",
-        "position": "outside hitter",
+        "position": "OPP",
         "player_notes": "",
         "team_id": "2"
     },
@@ -85,7 +85,7 @@
         "last_name": "Soto",
         "player_birthdate": "05/28/2001",
         "player_number": "04",
-        "position": "opposite hitter",
+        "position": "OH",
         "player_notes": "",
         "team_id": "2"
     },
@@ -94,7 +94,7 @@
         "last_name": "Booker",
         "player_birthdate": "05/25/1998",
         "player_number": "19",
-        "position": "libero",
+        "position": "L",
         "player_notes": "",
         "team_id": "2"
     },
@@ -103,7 +103,7 @@
         "last_name": "Gomez",
         "player_birthdate": "04/25/2001",
         "player_number": "14",
-        "position": "server",
+        "position": "S",
         "player_notes": "",
         "team_id": "2"
     },
@@ -112,7 +112,7 @@
         "last_name": "Rivera",
         "player_birthdate": ")4/19/2002",
         "player_number": "04",
-        "position": "setter",
+        "position": "S",
         "player_notes": "",
         "team_id": "3"
     },
@@ -121,7 +121,7 @@
         "last_name": "Monroe",
         "player_birthdate": "3/24/1999",
         "player_number": "19",
-        "position": "middle blocker",
+        "position": "MB",
         "player_notes": "",
         "team_id": "3"
     },
@@ -130,7 +130,7 @@
         "last_name": "Castillo",
         "player_birthdate": "8/12/1998",
         "player_number": "18",
-        "position": "oustide hitter",
+        "position": "OH",
         "player_notes": "",
         "team_id": "3"
     },
@@ -139,7 +139,7 @@
         "last_name": "Solis",
         "player_birthdate": "05/06/1998",
         "player_number": "05",
-        "position": "opposite hitter",
+        "position": "OPP",
         "player_notes": "",
         "team_id": "3"
     },

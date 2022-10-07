@@ -1,18 +1,18 @@
 [
     {
-        "event_type": "Tournament",
+        "event_type": "Match",
         "event_name": "Semi Finals",
         "event_date": "10/08/2022",
         "team_id": "1"
     },
     {
-        "event_type": "Paractice",
+        "event_type": "Practice",
         "event_name": "Practice game with MadDogs",
         "event_date": "10/10/2022",
         "team_id": "1"
     },
     {
-        "event_type": "Game",
+        "event_type": "Match",
         "event_name": "Team Alpha vs. Phoenix Valor",
         "event_date": "10/12/2022",
         "team_id": "1"
@@ -24,13 +24,13 @@
         "team_id": "1"
     },
     {
-        "event_type": "Game",
+        "event_type": "Match",
         "event_name": "Dophins vs. Phoenix Valor",
         "event_date": "10/17/2022",
         "team_id": "2"
     },    
     {
-        "event_type": "Game",
+        "event_type": "Match",
         "event_name": "Risings Suns vs. Phoenix Valor",
         "event_date": "10/19/2022",
         "team_id": "2"
@@ -54,7 +54,7 @@
         "team_id": "3"
     },
     {
-        "event_type": "Tournament",
+        "event_type": "Match",
         "event_name": "Finals",
         "event_date": "10/29/2022",
         "team_id": "3"
