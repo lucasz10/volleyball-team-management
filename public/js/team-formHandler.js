@@ -8,6 +8,11 @@ const createPlayerHandler = async () => {
   const playPos = document.querySelector("#playPos-create").value.trim();
   const playNotes = document.querySelector("#playNotes-create").value.trim();
 
+  if (!firstName || !lastName || !birthdate || !playNum) {
+    alert("Error: Please make sure all fields are filled in!")
+    return;
+  }
+
   if (playPos === "Please select a position") {
     alert("Error: Please select a position!");
     return;
@@ -44,8 +49,8 @@ const createEventHandler = async () => {
   const eventName = document.querySelector("#eventname-create").value.trim();
   const eventDate = document.querySelector("#eventDate-create").value.trim();
 
-  if (!eventName) {
-    alert("Error: Please enter a team name!");
+  if (!eventName || !eventDate) {
+    alert("Error: Please make sure all fields are filled in!");
     return;
   }
 
